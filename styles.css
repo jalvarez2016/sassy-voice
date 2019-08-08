@@ -20,6 +20,15 @@ button {
   background-color: rgb(55, 55, 55);
 }
 
+#button-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
 .talk{
   -webkit-user-select: none;
   font-family: 'Abel', sans-serif;
@@ -41,11 +50,15 @@ button {
   color: black;
 }
 
+.content-container{
+  width: 80vw;
+}
+
 .content{
   color: white;
   font-size: 30px;
   height: 10vh;
-  width: 80%;
+  width: 100%;
   overflow: auto;
   text-align: center;
 }
@@ -69,4 +82,42 @@ button {
   width: 100%;
   float: left;
   height: 10vh;
+  margin: 10px 0px;
+}
+
+/* Project Items */
+
+#itm-row{
+  height: 30vh;
+  display: none;
+}
+
+.itm-container{
+  height: inherit;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.itm-overflow{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  height: inherit;
+  width: 90%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.itm-overflow::-webkit-scrollbar{
+  width: 0px;
+}
+
+.itm{
+  flex: 0 0 auto;
+  display: inline-block;
+  margin: 0px 15px;
+  width: 20vw;
+  height: 100%;
+  background-color: rgb(111, 111, 111);
 }

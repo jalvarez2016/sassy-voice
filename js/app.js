@@ -13,6 +13,7 @@ recognition.onresult = function(event) {
   const transcript = event.results[current][0].transcript;
   console.log(event);
   $(".content").append("<br />" + transcript );
+  content.scrollTop = content.scrollHeight;
   readOutLoud(transcript);
 };
 
@@ -52,9 +53,20 @@ btn.addEventListener('click', () => {
 });
 
 function smallButton(){
-  console.log(btn.style, "smallButton function");
   $(".header").height(0);
   $(".talk").width('10%');
+  $('#button-container').css('float', 'left');
+  $('#button-container').css('display', 'block');
+  $('#button-container').css('padding-left', '20pxone');
+}
+
+function toggleItms(){
+  const itms = document.getElementById('itm-row');
+  if( itms.style.display === 'block' ){
+    itms.style.display = 'none';
+  } else {
+		itms.style.display = "block";
+	};
 }
 
 function readOutLoud(message){
@@ -76,6 +88,10 @@ function readOutLoud(message){
     speech.text = finalText;
   } else if(message.includes('shrink button')){
     smallButton();
+    const finalText = orderResponse[Math.floor(Math.random() * orderResponse.length)];
+    speech.text = finalText;
+  } else if(message.includes(' items')){
+    toggleItms();
     const finalText = orderResponse[Math.floor(Math.random() * orderResponse.length)];
     speech.text = finalText;
   };
