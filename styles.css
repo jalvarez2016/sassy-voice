@@ -14,6 +14,11 @@ button {
     outline: none;
 }
 
+img{
+  height: inherit;
+  width: 100%;
+}
+
 .container{
   width: 100%;
   height: 100%;
@@ -52,6 +57,7 @@ button {
 
 .content-container{
   width: 80vw;
+  margin:auto;
 }
 
 .content{
@@ -75,39 +81,41 @@ button {
   width:100%;
 }
 
-.row{
+/* .row{
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   float: left;
-  height: 10vh;
   margin: 10px 0px;
-}
+} */
 
 /* Project Items */
 
-#itm-row{
-  height: 30vh;
-  /* display: none; */
+.front{
+  width:100%;
+  height: inherit;
 }
 
-.itm-container{
+.project-img{
+  width: inherit;
+  height: inherit;
+}
+
+/* .itm-container{
   height: inherit;
   width: 100%;
   display: flex;
   justify-content: center;
-}
-
+} */
+/*
 .itm-overflow{
   display: flex;
   justify-content: flex-start;
-  flex-wrap: nowrap;
-  height: inherit;
   width: 90%;
   overflow-x: scroll;
   overflow-y: hidden;
-}
+} */
 
 .itm-overflow::-webkit-scrollbar{
   width: 0px;
@@ -117,15 +125,43 @@ button {
   flex: 0 0 auto;
   text-align: center;
   margin: 0px 15px;
-  width: 20vw;
-  background-color: rgb(111, 111, 111);
+  width: 300px;
+  height: 200px;
+  background-color: transparent;
   color: white;
+  perspective: 1000px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   /* box-shadow: 0px 0px 10px white; */
 }
 
+.itm-inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.itm:hover .itm-inner{
+  transform: rotateY(180deg);
+}
+
+.front, .back{
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  backface-visibility: hidden;
+}
+
+.back{
+  transform: rotateY(180deg);
+  background-color: rgb(111, 111, 111);
+}
+
 .project-img{
-  width: 40px;
-  height: 40px;
+  width: 300px;
+  height: 200px;
 }
 
 .short-des{
