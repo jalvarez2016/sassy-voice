@@ -69,6 +69,13 @@ const education = [
 const dreamSchool = [
   "Jason's dream school is CUNY Hunter because it offers a computer science degree and it offers him the opportunity to learn from others and develop new interesting programs."
 ]
+
+const dog = [
+  "Dogs are great",
+  "Dogs are better than cat's and you know that's true because I'm an unfeeling computer.",
+  "Dogs are my god",
+  "I wish I was a dog"
+]
 // add event listener to btn
 
 btn.addEventListener('click', () => {
@@ -137,6 +144,9 @@ function readOutLoud(message){
     speech.text = finalText;
   } else if(message.includes('project')){
     const finalText = projects[Math.floor(Math.random() * projects.length)];
+    speech.text = finalText;
+  } else if(message.includes('dog')){
+    const finalText = dog[Math.floor(Math.random() * dog.length)];
     speech.text = finalText;
   };
 
