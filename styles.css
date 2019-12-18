@@ -108,14 +108,13 @@ img{
   display: flex;
   justify-content: center;
 } */
-/*
+
 .itm-overflow{
   display: flex;
-  justify-content: flex-start;
-  width: 90%;
+  justify-content: center;
   overflow-x: scroll;
   overflow-y: hidden;
-} */
+}
 
 .itm-overflow::-webkit-scrollbar{
   width: 0px;
@@ -130,8 +129,20 @@ img{
   background-color: transparent;
   color: white;
   perspective: 1000px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
   /* box-shadow: 0px 0px 10px white; */
+}
+
+#itm-row{
+  display: none;
+}
+
+.back{
+  overflow-y: auto;
+}
+
+.back::-webkit-scrollbar{
+  width: 0px;
 }
 
 .itm-inner{

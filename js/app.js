@@ -46,6 +46,25 @@ const orderResponse = [
   "I hate my life",
   "Whatever"
 ]
+
+const tacobell =[
+  "Tacobell is the best food known to man. And it does not cause uncontrolable amounts of diarrhea"
+]
+
+const passions = [
+  "Jason is pursuing his passions by exploring different aspects of programming like this project where he learned voice recognition and made me using javascript html and css. He also knows the basics of python, react, react native, c# and c++"
+]
+
+const followingPassion = [
+  "By following his passion, Jason will be able to make people uncomfortable with his creations while contributing every now and then to projects that are acccessible to all or help people through thier issues."
+]
+const education = [
+  "Jason plans on accomplishing his goals by pursuing computer science to develop a deeper understanding of the intricacies of programming."
+]
+
+const dreamSchool = [
+  "Jason's dream school is CUNY Hunter because it offers a computer science degree and it offers him the opportunity to learn from others and develop new interesting programs."
+]
 // add event listener to btn
 
 btn.addEventListener('click', () => {
@@ -90,9 +109,27 @@ function readOutLoud(message){
     smallButton();
     const finalText = orderResponse[Math.floor(Math.random() * orderResponse.length)];
     speech.text = finalText;
-  } else if(message.includes(' items')){
+  } else if(message.includes('items')){
     toggleItms();
     const finalText = orderResponse[Math.floor(Math.random() * orderResponse.length)];
+    speech.text = finalText;
+  } else if(message.includes('Taco Bell')){
+    const finalText = tacobell[Math.floor(Math.random() * tacobell.length)];
+    speech.text = finalText;
+  } else if(message.includes(' Passions')){
+    const finalText = passions[Math.floor(Math.random() * passions.length)];
+    speech.text = finalText;
+  } else if(message.includes(' follow passion ')){
+    const finalText = followingPassion[Math.floor(Math.random() * followingPassion.length)];
+    speech.text = finalText;
+  } else if(message.includes(' education')){
+    const finalText = education[Math.floor(Math.random() * education.length)];
+    speech.text = finalText;
+  } else if(message.includes(' items')){
+    const finalText = orderResponse[Math.floor(Math.random() * orderResponse.length)];
+    speech.text = finalText;
+  } else if(message.includes('dream')){
+    const finalText = dreamSchool[Math.floor(Math.random() * dreamSchool.length)];
     speech.text = finalText;
   };
 
