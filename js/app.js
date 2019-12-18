@@ -47,6 +47,10 @@ const orderResponse = [
   "Whatever"
 ]
 
+const projects = [
+  "This is a project intended to display Jason's projects."
+]
+
 const tacobell =[
   "Tacobell is the best food known to man. And it does not cause uncontrolable amounts of diarrhea"
 ]
@@ -130,6 +134,9 @@ function readOutLoud(message){
     speech.text = finalText;
   } else if(message.includes('dream')){
     const finalText = dreamSchool[Math.floor(Math.random() * dreamSchool.length)];
+    speech.text = finalText;
+  } else if(message.includes('project')){
+    const finalText = projects[Math.floor(Math.random() * projects.length)];
     speech.text = finalText;
   };
 
