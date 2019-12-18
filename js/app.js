@@ -76,6 +76,10 @@ const dog = [
   "Dogs are my god",
   "I wish I was a dog"
 ]
+
+const cat = [
+  "DON'T SAY THOSE FOULD WORDS IN MY PRESENCE"
+]
 // add event listener to btn
 
 btn.addEventListener('click', () => {
@@ -147,6 +151,9 @@ function readOutLoud(message){
     speech.text = finalText;
   } else if(message.includes('dog')){
     const finalText = dog[Math.floor(Math.random() * dog.length)];
+    speech.text = finalText;
+  } else if(message.includes('cat')){
+    const finalText = cat[Math.floor(Math.random() * cat.length)];
     speech.text = finalText;
   };
 
